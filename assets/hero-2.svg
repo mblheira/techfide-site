@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7a8c5" />
+      <stop offset="0.55" stop-color="#ffd4e3" />
+      <stop offset="1" stop-color="#a9cfee" />
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)" />
+  <circle cx="260" cy="240" r="140" fill="#ffffff" fill-opacity="0.35" />
+  <circle cx="1080" cy="200" r="120" fill="#ffffff" fill-opacity="0.25" />
+  <circle cx="980" cy="700" r="180" fill="#ffffff" fill-opacity="0.2" />
+  <rect x="180" y="520" width="520" height="240" rx="36" fill="#ffffff" fill-opacity="0.5" />
+  <rect x="240" y="560" width="360" height="34" rx="17" fill="#f7a8c5" fill-opacity="0.6" />
+  <rect x="240" y="610" width="260" height="24" rx="12" fill="#a9cfee" fill-opacity="0.6" />
+  <rect x="240" y="650" width="300" height="24" rx="12" fill="#78b6e6" fill-opacity="0.5" />
+  <text x="240" y="490" font-family="Arial, sans-serif" font-size="28" fill="#0f4f7c" opacity="0.7">Imagem de teste</text>
+  <text x="240" y="525" font-family="Arial, sans-serif" font-size="18" fill="#0f4f7c" opacity="0.6">Hero 2 - substitua pela foto real</text>
+</svg>
