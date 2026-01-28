@@ -641,6 +641,13 @@ h1 {
   margin: 10px auto 18px;
 }
 
+#quem-somos h2 {
+  text-align: center;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #quem-somos .story-card {
   max-width: 560px;
   padding: 26px;
@@ -784,61 +791,254 @@ h1 {
   pointer-events: none;
 }
 
-.contact-grid {
+.contact-modern {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 36px;
+  align-items: center;
 }
 
-.contact-card,
-.contact-form {
+.contact-links {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.contact-logo-full {
+  width: min(320px, 88%);
+  margin: 0 auto 10px;
+}
+
+.linktree {
+  display: grid;
+  gap: 34px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px 10px;
+  border-radius: 18px;
   background: var(--white);
-  padding: 28px;
-  border-radius: 24px;
+  border: 1px solid rgba(15, 79, 124, 0.12);
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(15, 79, 124, 0.1);
-  display: grid;
-  gap: 16px;
-  color: var(--ink);
-  font-weight: 500;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover,
-.contact-form:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 50px rgba(120, 182, 230, 0.22);
-}
-
-.contact-info {
-  display: grid;
-  gap: 12px;
-}
-
-.contact-info strong {
-  display: block;
   color: var(--navy);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: visible;
+  min-height: 70px;
 }
 
-.contact-form label {
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(120, 182, 230, 0.28);
+}
+
+.link-body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.link-card .link-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.link-card .link-desc {
+  color: rgba(24, 50, 74, 0.7);
+  font-weight: 500;
+}
+
+.link-card.has-left {
+  padding-left: 108px;
+}
+
+.link-card.has-right {
+  padding-right: 108px;
+}
+
+.link-card.accent-map {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(226, 243, 255, 0.8));
+  border-color: rgba(68, 157, 219, 0.25);
+}
+
+.link-card.accent-whatsapp {
+  background: linear-gradient(120deg, rgba(229, 255, 240, 0.9), rgba(210, 255, 227, 0.7));
+  border-color: rgba(37, 211, 102, 0.3);
+}
+
+.link-card.accent-instagram {
+  background: linear-gradient(120deg, rgba(255, 226, 241, 0.85), rgba(235, 226, 255, 0.7));
+  border-color: rgba(224, 72, 141, 0.32);
+}
+
+.link-card.accent-google {
+  background: linear-gradient(120deg, rgba(232, 244, 255, 0.9), rgba(255, 243, 224, 0.75));
+  border-color: rgba(60, 120, 185, 0.28);
+}
+
+.link-card.accent-pink {
+  background: linear-gradient(120deg, rgba(246, 163, 196, 0.35), rgba(255, 255, 255, 0.85));
+  border-color: rgba(232, 90, 155, 0.3);
+}
+
+.link-card.accent-blue {
+  background: linear-gradient(120deg, rgba(169, 207, 238, 0.45), rgba(255, 255, 255, 0.9));
+  border-color: rgba(111, 182, 231, 0.3);
+}
+
+.link-badge {
+  position: absolute;
+  top: -18px;
+  width: min(84px, 34%);
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 14px 26px rgba(15, 79, 124, 0.25));
+  pointer-events: none;
+}
+
+.link-badge.badge-left {
+  left: 26px;
+}
+
+.link-badge.badge-right {
+  right: 26px;
+}
+
+@media (max-width: 900px) {
+  .link-badge {
+    width: min(90px, 40%);
+    top: -18px;
+  }
+
+  .link-card.has-left {
+    padding-left: 94px;
+  }
+
+  .link-card.has-right {
+    padding-right: 94px;
+  }
+}
+
+@media (max-width: 640px) {
+  .linktree {
+    gap: 28px;
+  }
+
+  .link-card {
+    padding: 12px 20px 10px;
+    min-height: 72px;
+  }
+
+  .link-card.has-left {
+    padding-left: 100px;
+  }
+
+  .link-card.has-right {
+    padding-right: 100px;
+  }
+
+  .link-badge {
+    width: min(98px, 44%);
+    top: -18px;
+  }
+
+  .link-badge.badge-left {
+    left: 14px;
+  }
+
+  .link-badge.badge-right {
+    right: 14px;
+  }
+
+  .link-desc {
+    font-size: 0.95rem;
+  }
+}
+
+.contact-map {
+  display: grid;
+  justify-items: end;
+  align-self: center;
+}
+
+.map-card {
+  margin-right: -24px;
+}
+
+.map-card {
+  width: min(640px, 100%);
+  background: var(--white);
+  padding: 20px;
+  border-radius: 28px;
+  border: 1px solid rgba(15, 79, 124, 0.12);
+  box-shadow: 0 28px 70px rgba(15, 79, 124, 0.18);
+  display: grid;
+  gap: 18px;
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 79, 124, 0.14);
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(219, 236, 248, 0.7));
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.98), rgba(233, 245, 255, 0.9));
+  border-radius: 16px;
+  border: 2px solid rgba(15, 79, 124, 0.18);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 18px 38px rgba(15, 79, 124, 0.28);
+  padding: 8px;
+}
+
+.map-pin img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.map-pin::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 79, 124, 0.08);
+}
+
+.map-meta {
   display: grid;
   gap: 6px;
-  font-weight: 600;
   color: var(--navy);
+  font-weight: 600;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(15, 79, 124, 0.2);
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.contact-form small {
+.map-meta span {
   color: rgba(24, 50, 74, 0.7);
+  font-weight: 500;
 }
 
 .instagram-carousel {
@@ -877,6 +1077,22 @@ h1 {
   display: grid;
   gap: 12px;
   min-width: 0;
+}
+
+.insta-slide.delay-1 {
+  --delay: 0.05s;
+}
+
+.insta-slide.delay-2 {
+  --delay: 0.1s;
+}
+
+.insta-slide.delay-3 {
+  --delay: 0.15s;
+}
+
+.insta-slide.delay-4 {
+  --delay: 0.2s;
 }
 
 .insta-toolbar {
@@ -1084,6 +1300,22 @@ h1 {
 }
 
 @media (max-width: 900px) {
+  .contact-map {
+    display: none;
+  }
+
+  .contact-modern {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-map {
+    justify-items: center;
+  }
+
+  .map-card {
+    width: min(560px, 100%);
+  }
   .two-cols {
     grid-template-columns: 1fr;
     gap: 36px;
