@@ -51,7 +51,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -70,40 +70,67 @@
           <a href="#produtos">Produtos</a>
           <a href="#nuvem">Nuvem</a>
           <a href="#empresa">Empresa</a>
-          <a href="#contato">Contato</a>
+          <a class="menu-destaque" href="#contato">Fale conosco</a>
         </nav>
       </div>
     </header>
 
     <main id="conteudo">
+      <!-- Abertura -->
       <section class="abertura" id="inicio">
         <div class="wrap abertura-grade">
-          <div>
-          <h1>Software feito sob medida, do desenho à operação.</h1>
-          <p class="abertura-texto">
-            A TechFide é uma software house de São José do Rio Preto. Desenvolvemos sistemas,
-            aplicativos e produtos próprios para imobiliárias, construtoras e empresas que
-            precisam de tecnologia que simplesmente funciona.
-          </p>
-          <p class="abertura-links">
-            <a href="https://wa.me/5517999608805?text=Ol%C3%A1%2C%20TechFide.%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-            <a href="#produtos">Conhecer os produtos</a>
-          </p>
+          <div class="abertura-texto">
+            <p class="rotulo"><b>TF</b> Software house · São José do Rio Preto</p>
+            <h1>Software feito sob medida, do desenho à operação.</h1>
+            <p class="abertura-resumo">
+              Desenvolvemos sistemas, aplicativos e produtos próprios para imobiliárias,
+              construtoras e empresas que precisam de tecnologia que simplesmente funciona.
+            </p>
+            <p class="abertura-links">
+              <a class="botao" href="https://wa.me/5517999608805?text=Ol%C3%A1%2C%20TechFide.%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+              <a class="seta" href="#produtos">Conhecer os produtos</a>
+            </p>
           </div>
-          <img class="abertura-marca" src="assets/logo-tf.webp" alt="" width="240" height="289" />
+          <div class="abertura-marca" aria-hidden="true">
+            <img src="assets/logo-icon.webp" alt="" width="420" height="472" />
+          </div>
+        </div>
+        <div class="wrap fatos">
+          <div><span>Sede</span><strong>Rio Preto, SP</strong></div>
+          <div><span>Produtos próprios</span><strong>Quatro em operação</strong></div>
+          <div><span>Infraestrutura</span><strong>Google Cloud</strong></div>
+          <div><span>Atendimento</span><strong>Direto com quem desenvolve</strong></div>
         </div>
       </section>
 
+      <!-- Para quem -->
+      <section class="paraquem" aria-label="Para quem trabalhamos">
+        <div class="wrap">
+          <p class="rotulo">Para quem trabalhamos</p>
+          <ul class="paraquem-lista">
+            <li>Imobiliárias</li>
+            <li>Construtoras</li>
+            <li>Clínicas</li>
+            <li>Comércio</li>
+            <li>Escritórios</li>
+            <li>Paróquias</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Serviços -->
       <section class="bloco" id="servicos">
-        <div class="wrap grade-titulo">
-          <h2>Serviços</h2>
-          <p class="bloco-intro">
-            Trabalhamos com poucos clientes por vez. Quem atende é quem desenvolve.
+        <div class="wrap cabecalho">
+          <h2><small>01</small>Serviços</h2>
+          <p>
+            Trabalhamos com poucos clientes por vez e cobrimos o ciclo inteiro: o que precisa ser
+            feito, como construir e como manter rodando depois.
           </p>
         </div>
         <div class="wrap">
-          <ol class="lista-servicos">
+          <ol class="servicos">
             <li>
+              <span class="caixa">S</span>
               <h3>Sistemas e aplicativos</h3>
               <p>
                 Desenvolvimento sob encomenda de sistemas web, APIs e aplicativos. Começamos pelo
@@ -111,6 +138,7 @@
               </p>
             </li>
             <li>
+              <span class="caixa">W</span>
               <h3>Sites institucionais</h3>
               <p>
                 Sites leves, rápidos e fáceis de encontrar no Google, integrados a WhatsApp, Maps e
@@ -118,6 +146,7 @@
               </p>
             </li>
             <li>
+              <span class="caixa">N</span>
               <h3>Nuvem e infraestrutura</h3>
               <p>
                 Hospedagem, migração e operação no Google Cloud. Você paga pelo que usa e não
@@ -125,6 +154,7 @@
               </p>
             </li>
             <li>
+              <span class="caixa">C</span>
               <h3>Consultoria</h3>
               <p>
                 Avaliação técnica antes de contratar ou investir: o que vale construir, o que vale
@@ -132,6 +162,7 @@
               </p>
             </li>
             <li>
+              <span class="caixa">M</span>
               <h3>Suporte e manutenção</h3>
               <p>
                 Correções, atualizações e evolução de sistemas que já existem, inclusive os que
@@ -139,92 +170,111 @@
               </p>
             </li>
             <li>
+              <span class="caixa">E</span>
               <h3>Equipamentos</h3>
               <p>
-                Fornecimento de computadores, periféricos e suprimentos de informática para
-                clientes que preferem resolver tudo com um único fornecedor.
+                Fornecimento de computadores, periféricos e suprimentos de informática para quem
+                prefere resolver tudo com um único fornecedor.
               </p>
             </li>
           </ol>
         </div>
       </section>
 
+      <!-- Produtos -->
       <section class="bloco bloco-cinza" id="produtos">
-        <div class="wrap grade-titulo">
-          <h2>Produtos</h2>
-          <p class="bloco-intro">
-            Além dos projetos para clientes, mantemos produtos próprios. Todos rodam na mesma
-            base técnica, o que nos permite lançar e manter cada um com uma equipe pequena.
+        <div class="wrap cabecalho">
+          <h2><small>02</small>Produtos</h2>
+          <p>
+            Além dos projetos para clientes, mantemos produtos próprios. Todos rodam na mesma base
+            técnica, o que nos permite lançar e manter cada um com uma equipe pequena.
           </p>
         </div>
         <div class="wrap">
-          <ul class="lista-produtos">
+          <ul class="produtos">
             <li id="imobifide">
-              <div class="produto-nome">
-                <h3>ImobiFide</h3>
-                <span>Gestão para imobiliárias</span>
-              </div>
-              <p>
-                Cadastro de imóveis, clientes, contratos e documentos em um único sistema, com
-                publicação de anúncios e acesso pelo celular.
-              </p>
-              <a href="https://imobifide.com.br" target="_blank" rel="noopener noreferrer">imobifide.com.br</a>
+              <a href="https://imobifide.com.br" target="_blank" rel="noopener noreferrer">
+                <span class="caixa grande">IF</span>
+                <span class="produto-nome">
+                  <strong>ImobiFide</strong>
+                  <em>Gestão para imobiliárias</em>
+                </span>
+                <span class="produto-texto">
+                  Cadastro de imóveis, clientes, contratos e documentos em um único sistema, com
+                  publicação de anúncios e acesso pelo celular.
+                </span>
+                <span class="produto-link">imobifide.com.br</span>
+              </a>
             </li>
             <li id="imobinexa">
-              <div class="produto-nome">
-                <h3>ImobiNexa</h3>
-                <span>Integração imobiliária</span>
-              </div>
-              <p>
-                Conecta a carteira de imóveis a portais, sites e canais de captação a partir de
-                uma única fonte de dados, com API para integrações.
-              </p>
-              <a href="https://imobinexabrasil.com.br" target="_blank" rel="noopener noreferrer">imobinexabrasil.com.br</a>
+              <a href="https://imobinexabrasil.com.br" target="_blank" rel="noopener noreferrer">
+                <span class="caixa grande">IN</span>
+                <span class="produto-nome">
+                  <strong>ImobiNexa</strong>
+                  <em>Integração imobiliária</em>
+                </span>
+                <span class="produto-texto">
+                  Conecta a carteira de imóveis a portais, sites e canais de captação a partir de
+                  uma única fonte de dados, com API para integrações.
+                </span>
+                <span class="produto-link">imobinexabrasil.com.br</span>
+              </a>
             </li>
             <li id="prumo">
-              <div class="produto-nome">
-                <h3>Prumo</h3>
-                <span>Gestão de obras</span>
-              </div>
-              <p>
-                Orçamento, cronograma, medições e compras para construtoras, engenheiros e
-                prestadores de serviço, com acompanhamento direto do canteiro.
-              </p>
-              <a href="https://sistemaprumo.com.br" target="_blank" rel="noopener noreferrer">sistemaprumo.com.br</a>
+              <a href="https://sistemaprumo.com.br" target="_blank" rel="noopener noreferrer">
+                <span class="caixa grande">P</span>
+                <span class="produto-nome">
+                  <strong>Prumo</strong>
+                  <em>Gestão de obras</em>
+                </span>
+                <span class="produto-texto">
+                  Orçamento, cronograma, medições e compras para construtoras, engenheiros e
+                  prestadores de serviço, com acompanhamento direto do canteiro.
+                </span>
+                <span class="produto-link">sistemaprumo.com.br</span>
+              </a>
             </li>
-            <li id="ocoroinha">
-              <div class="produto-nome">
-                <h3>O Coroinha</h3>
-                <span>Projeto sem fins lucrativos</span>
-              </div>
-              <p>
-                Ferramenta gratuita para paróquias organizarem escalas, formação e comunicação de
-                coroinhas e equipes litúrgicas. Mantido pela TechFide como contribuição à
-                comunidade.
-              </p>
-              <a href="https://ocoroinha.com.br" target="_blank" rel="noopener noreferrer">ocoroinha.com.br</a>
+            <li id="ocoroinha" class="social">
+              <a href="https://ocoroinha.com.br" target="_blank" rel="noopener noreferrer">
+                <span class="caixa grande">OC</span>
+                <span class="produto-nome">
+                  <strong>O Coroinha</strong>
+                  <em>Sem fins lucrativos</em>
+                </span>
+                <span class="produto-texto">
+                  Ferramenta gratuita para paróquias organizarem escalas, formação e comunicação
+                  de coroinhas e equipes litúrgicas. Mantido pela TechFide como contribuição à
+                  comunidade.
+                </span>
+                <span class="produto-link">ocoroinha.com.br</span>
+              </a>
             </li>
             <li id="sonhodemaria">
-              <div class="produto-nome">
-                <h3>Clínica Sonho de Maria</h3>
-                <span>Site para cliente</span>
-              </div>
-              <p>
-                Site institucional de uma clínica de cuidado infantil em Rio Preto, com vídeo,
-                apresentação da equipe e integração com Instagram, WhatsApp e Google Maps.
-              </p>
-              <a href="https://www.sonhodemaria.com.br/" target="_blank" rel="noopener noreferrer">sonhodemaria.com.br</a>
+              <a href="https://www.sonhodemaria.com.br/" target="_blank" rel="noopener noreferrer">
+                <span class="caixa grande">SM</span>
+                <span class="produto-nome">
+                  <strong>Clínica Sonho de Maria</strong>
+                  <em>Site para cliente</em>
+                </span>
+                <span class="produto-texto">
+                  Site institucional de uma clínica de cuidado infantil em Rio Preto, com vídeo,
+                  apresentação da equipe e integração com Instagram, WhatsApp e Google Maps.
+                </span>
+                <span class="produto-link">sonhodemaria.com.br</span>
+              </a>
             </li>
           </ul>
         </div>
       </section>
 
+      <!-- Método -->
       <section class="bloco" id="metodo">
-        <div class="wrap grade-titulo">
-          <h2>Como é trabalhar com a gente</h2>
+        <div class="wrap cabecalho">
+          <h2><small>03</small>Como é trabalhar com a gente</h2>
+          <p>Quatro etapas, sempre as mesmas, do primeiro contato ao suporte.</p>
         </div>
         <div class="wrap">
-          <ol class="lista-etapas">
+          <ol class="etapas">
             <li>
               <h3>Conversa inicial</h3>
               <p>Entendemos o problema e o contexto. Se não fizer sentido construir, dizemos isso.</p>
@@ -245,16 +295,17 @@
         </div>
       </section>
 
-      <section class="bloco bloco-cinza" id="nuvem">
-        <div class="wrap grade-titulo">
-          <h2>Nuvem</h2>
-          <p class="bloco-intro">
+      <!-- Nuvem -->
+      <section class="bloco bloco-preto" id="nuvem">
+        <div class="wrap cabecalho">
+          <h2><small>04</small>Nuvem</h2>
+          <p>
             Nossos produtos e os sistemas que desenvolvemos rodam no Google Cloud, na região de
             São Paulo.
           </p>
         </div>
         <div class="wrap colunas">
-          <div>
+          <div class="prosa">
             <p>
               Escolhemos a nuvem por um motivo simples: uma empresa pequena não deveria manter
               servidor. Serviços como Cloud Run, Firestore e Firebase escalam sozinhos, cobram pelo
@@ -268,8 +319,8 @@
             <p>
               Preparamos uma proposta para o programa de créditos em nuvem do Google Cloud, com o
               plano de uso, o cronograma e os resultados esperados.
-              <a href="proposta-cloud.html">Leia a proposta completa</a>.
             </p>
+            <p><a class="seta" href="proposta-cloud.html">Ler a proposta completa</a></p>
           </div>
           <dl class="ficha">
             <div><dt>Aplicação</dt><dd>Cloud Run, Cloud Functions</dd></div>
@@ -281,21 +332,23 @@
         </div>
       </section>
 
+      <!-- Empresa -->
       <section class="bloco" id="empresa">
-        <div class="wrap grade-titulo">
-          <h2>Empresa</h2>
+        <div class="wrap cabecalho">
+          <h2><small>05</small>Empresa</h2>
+          <p>Pequenos de propósito. Preferimos fazer bem poucos projetos a fazer muitos pela metade.</p>
         </div>
         <div class="wrap colunas">
-          <div>
+          <div class="prosa">
             <p>
               A TechFide é o nome fantasia da Matheus Barbosa Lheira Soluções em Tecnologia LTDA,
               empresa de desenvolvimento de software com sede em São José do Rio Preto, interior
               de São Paulo. Atendemos clientes de qualquer lugar do Brasil.
             </p>
             <p>
-              Somos pequenos de propósito. Preferimos fazer bem poucos projetos a fazer muitos
-              pela metade, e tratamos os produtos próprios com o mesmo cuidado que os projetos
-              de cliente.
+              Tratamos os produtos próprios com o mesmo cuidado que os projetos de cliente, e
+              vice-versa: o que aprendemos operando o ImobiFide e o Prumo todos os dias vai para
+              os sistemas que entregamos.
             </p>
           </div>
           <dl class="ficha">
@@ -307,12 +360,11 @@
         </div>
       </section>
 
+      <!-- Contato -->
       <section class="bloco contato" id="contato">
         <div class="wrap">
           <h2>Vamos conversar?</h2>
-          <p class="contato-texto">
-            Conte o que você precisa. Respondemos em até um dia útil.
-          </p>
+          <p class="contato-texto">Conte o que você precisa. Respondemos em até um dia útil.</p>
           <ul class="contato-lista">
             <li>
               <span>WhatsApp</span>
@@ -332,18 +384,26 @@
     </main>
 
     <footer class="rodape">
-      <div class="wrap rodape-linha">
-        <img src="assets/logo-icon.webp" alt="" width="28" height="31" loading="lazy" />
-        <p>
-          © <span id="ano">2026</span> TechFide · Matheus Barbosa Lheira Soluções em Tecnologia LTDA ·
-          CNPJ 69.381.775/0001-50 · São José do Rio Preto, SP
-        </p>
+      <div class="wrap rodape-grade">
+        <div>
+          <img src="assets/logo-full.webp" alt="TechFide" width="140" height="51" loading="lazy" />
+          <p>Software sob medida, nuvem e produtos próprios.</p>
+        </div>
         <nav aria-label="Rodapé">
           <a href="#servicos">Serviços</a>
           <a href="#produtos">Produtos</a>
+          <a href="#nuvem">Nuvem</a>
           <a href="proposta-cloud.html">Proposta de inovação</a>
           <a href="#contato">Contato</a>
         </nav>
+        <div class="rodape-empresa">
+          <p>Matheus Barbosa Lheira Soluções em Tecnologia LTDA</p>
+          <p>CNPJ 69.381.775/0001-50</p>
+          <p>São José do Rio Preto, SP</p>
+        </div>
+      </div>
+      <div class="wrap rodape-base">
+        <small>© <span id="ano">2026</span> TechFide. Todos os direitos reservados.</small>
       </div>
     </footer>
 
