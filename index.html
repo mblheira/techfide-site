@@ -8,7 +8,7 @@
       name="description"
       content="A TechFide desenvolve sistemas, aplicativos e produtos próprios para imobiliárias, construtoras e empresas que precisam de software que funciona. São José do Rio Preto, SP."
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0b0c" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://techfide.com.br/" />
 
@@ -51,7 +51,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -78,22 +78,18 @@
     <main id="conteudo">
       <!-- Abertura -->
       <section class="abertura" id="inicio">
-        <div class="wrap abertura-grade">
-          <div class="abertura-texto">
-            <p class="rotulo"><b>TF</b> Software house · São José do Rio Preto</p>
-            <h1>Software feito sob medida, do desenho à operação.</h1>
-            <p class="abertura-resumo">
-              Desenvolvemos sistemas, aplicativos e produtos próprios para imobiliárias,
-              construtoras e empresas que precisam de tecnologia que simplesmente funciona.
-            </p>
-            <p class="abertura-links">
-              <a class="botao" href="https://wa.me/5517999608805?text=Ol%C3%A1%2C%20TechFide.%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-              <a class="seta" href="#produtos">Conhecer os produtos</a>
-            </p>
-          </div>
-          <div class="abertura-marca" aria-hidden="true">
-            <img src="assets/logo-icon.webp" alt="" width="420" height="472" />
-          </div>
+        <canvas class="malha" aria-hidden="true"></canvas>
+        <div class="wrap abertura-conteudo">
+          <p class="rotulo rotulo-claro"><b>TF</b> Software house · São José do Rio Preto</p>
+          <h1>Software feito sob medida, do desenho à operação.</h1>
+          <p class="abertura-resumo">
+            Desenvolvemos sistemas, aplicativos e produtos próprios para imobiliárias,
+            construtoras e empresas que precisam de tecnologia que simplesmente funciona.
+          </p>
+          <p class="abertura-links">
+            <a class="botao" href="https://wa.me/5517999608805?text=Ol%C3%A1%2C%20TechFide.%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            <a class="seta seta-clara" href="#produtos">Conhecer os produtos</a>
+          </p>
         </div>
         <div class="wrap fatos">
           <div><span>Sede</span><strong>Rio Preto, SP</strong></div>
@@ -103,24 +99,25 @@
         </div>
       </section>
 
-      <!-- Para quem -->
-      <section class="paraquem" aria-label="Para quem trabalhamos">
-        <div class="wrap">
-          <p class="rotulo">Para quem trabalhamos</p>
-          <ul class="paraquem-lista">
-            <li>Imobiliárias</li>
-            <li>Construtoras</li>
-            <li>Clínicas</li>
-            <li>Comércio</li>
-            <li>Escritórios</li>
-            <li>Paróquias</li>
+      <!-- Faixa de tecnologias -->
+      <div class="faixa" aria-label="Tecnologias que usamos">
+        <div class="faixa-trilho">
+          <ul>
+            <li>Cloud Run</li><li>Firestore</li><li>Firebase</li><li>BigQuery</li><li>Vertex AI</li>
+            <li>Gemini</li><li>Cloud SQL</li><li>Pub/Sub</li><li>Node.js</li><li>TypeScript</li>
+            <li>Flutter</li><li>PostgreSQL</li><li>Terraform</li><li>Cloud Build</li>
+          </ul>
+          <ul aria-hidden="true">
+            <li>Cloud Run</li><li>Firestore</li><li>Firebase</li><li>BigQuery</li><li>Vertex AI</li>
+            <li>Gemini</li><li>Cloud SQL</li><li>Pub/Sub</li><li>Node.js</li><li>TypeScript</li>
+            <li>Flutter</li><li>PostgreSQL</li><li>Terraform</li><li>Cloud Build</li>
           </ul>
         </div>
-      </section>
+      </div>
 
       <!-- Serviços -->
       <section class="bloco" id="servicos">
-        <div class="wrap cabecalho">
+        <div class="wrap cabecalho surge">
           <h2><small>01</small>Serviços</h2>
           <p>
             Trabalhamos com poucos clientes por vez e cobrimos o ciclo inteiro: o que precisa ser
@@ -129,7 +126,7 @@
         </div>
         <div class="wrap">
           <ol class="servicos">
-            <li>
+            <li class="surge">
               <span class="caixa">S</span>
               <h3>Sistemas e aplicativos</h3>
               <p>
@@ -137,7 +134,7 @@
                 processo que precisa melhorar, não pela tecnologia da moda.
               </p>
             </li>
-            <li>
+            <li class="surge">
               <span class="caixa">W</span>
               <h3>Sites institucionais</h3>
               <p>
@@ -145,7 +142,7 @@
                 redes sociais. Sem plataforma paga por trás.
               </p>
             </li>
-            <li>
+            <li class="surge">
               <span class="caixa">N</span>
               <h3>Nuvem e infraestrutura</h3>
               <p>
@@ -153,7 +150,7 @@
                 precisa manter servidor.
               </p>
             </li>
-            <li>
+            <li class="surge">
               <span class="caixa">C</span>
               <h3>Consultoria</h3>
               <p>
@@ -161,7 +158,7 @@
                 comprar pronto e o que pode esperar.
               </p>
             </li>
-            <li>
+            <li class="surge">
               <span class="caixa">M</span>
               <h3>Suporte e manutenção</h3>
               <p>
@@ -169,7 +166,7 @@
                 não foram feitos por nós.
               </p>
             </li>
-            <li>
+            <li class="surge">
               <span class="caixa">E</span>
               <h3>Equipamentos</h3>
               <p>
@@ -183,7 +180,7 @@
 
       <!-- Produtos -->
       <section class="bloco bloco-cinza" id="produtos">
-        <div class="wrap cabecalho">
+        <div class="wrap cabecalho surge">
           <h2><small>02</small>Produtos</h2>
           <p>
             Além dos projetos para clientes, mantemos produtos próprios. Todos rodam na mesma base
@@ -192,75 +189,150 @@
         </div>
         <div class="wrap">
           <ul class="produtos">
-            <li id="imobifide">
+            <!-- ImobiFide -->
+            <li class="produto surge" id="imobifide">
               <a href="https://imobifide.com.br" target="_blank" rel="noopener noreferrer">
-                <span class="caixa grande">IF</span>
-                <span class="produto-nome">
-                  <strong>ImobiFide</strong>
-                  <em>Gestão para imobiliárias</em>
-                </span>
-                <span class="produto-texto">
-                  Cadastro de imóveis, clientes, contratos e documentos em um único sistema, com
-                  publicação de anúncios e acesso pelo celular.
-                </span>
-                <span class="produto-link">imobifide.com.br</span>
+                <div class="tela" aria-hidden="true">
+                  <div class="tela-barra"><i></i><i></i><i></i><span>imobifide.com.br</span></div>
+                  <div class="mock mock-if">
+                    <div class="mock-lateral"><b></b><b></b><b></b><b></b></div>
+                    <div class="mock-area">
+                      <div class="mock-busca"></div>
+                      <div class="mock-cards">
+                        <div class="mock-card"><em></em><u></u><u></u></div>
+                        <div class="mock-card"><em></em><u></u><u></u></div>
+                        <div class="mock-card"><em></em><u></u><u></u></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="produto-texto">
+                  <span class="caixa">IF</span>
+                  <div>
+                    <strong>ImobiFide</strong>
+                    <em>Gestão para imobiliárias</em>
+                    <p>Cadastro de imóveis, clientes, contratos e documentos em um único sistema, com publicação de anúncios e acesso pelo celular.</p>
+                  </div>
+                </div>
               </a>
             </li>
-            <li id="imobinexa">
+
+            <!-- ImobiNexa -->
+            <li class="produto surge" id="imobinexa">
               <a href="https://imobinexabrasil.com.br" target="_blank" rel="noopener noreferrer">
-                <span class="caixa grande">IN</span>
-                <span class="produto-nome">
-                  <strong>ImobiNexa</strong>
-                  <em>Integração imobiliária</em>
-                </span>
-                <span class="produto-texto">
-                  Conecta a carteira de imóveis a portais, sites e canais de captação a partir de
-                  uma única fonte de dados, com API para integrações.
-                </span>
-                <span class="produto-link">imobinexabrasil.com.br</span>
+                <div class="tela" aria-hidden="true">
+                  <div class="tela-barra"><i></i><i></i><i></i><span>imobinexabrasil.com.br</span></div>
+                  <div class="mock mock-in">
+                    <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+                      <g class="fluxo" stroke="#0093fe" stroke-width="1.5" fill="none">
+                        <path d="M160 90 L60 40" /><path d="M160 90 L260 40" />
+                        <path d="M160 90 L60 140" /><path d="M160 90 L260 140" />
+                        <path d="M160 90 L160 22" />
+                      </g>
+                      <g fill="#ffffff" stroke="#d6d6d6">
+                        <rect x="36" y="26" width="48" height="28" rx="3" /><rect x="236" y="26" width="48" height="28" rx="3" />
+                        <rect x="36" y="126" width="48" height="28" rx="3" /><rect x="236" y="126" width="48" height="28" rx="3" />
+                        <rect x="136" y="8" width="48" height="28" rx="3" />
+                      </g>
+                      <rect x="138" y="68" width="44" height="44" fill="#0093fe" />
+                      <text x="160" y="97" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="16" fill="#0b0b0c">IN</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="produto-texto">
+                  <span class="caixa">IN</span>
+                  <div>
+                    <strong>ImobiNexa</strong>
+                    <em>Integração imobiliária</em>
+                    <p>Conecta a carteira de imóveis a portais, sites e canais de captação a partir de uma única fonte de dados, com API para integrações.</p>
+                  </div>
+                </div>
               </a>
             </li>
-            <li id="prumo">
+
+            <!-- Prumo -->
+            <li class="produto surge" id="prumo">
               <a href="https://sistemaprumo.com.br" target="_blank" rel="noopener noreferrer">
-                <span class="caixa grande">P</span>
-                <span class="produto-nome">
-                  <strong>Prumo</strong>
-                  <em>Gestão de obras</em>
-                </span>
-                <span class="produto-texto">
-                  Orçamento, cronograma, medições e compras para construtoras, engenheiros e
-                  prestadores de serviço, com acompanhamento direto do canteiro.
-                </span>
-                <span class="produto-link">sistemaprumo.com.br</span>
+                <div class="tela" aria-hidden="true">
+                  <div class="tela-barra"><i></i><i></i><i></i><span>sistemaprumo.com.br</span></div>
+                  <div class="mock mock-pr">
+                    <div class="gantt">
+                      <div class="gantt-linha"><u></u><b style="--i:0;--w:38%"></b></div>
+                      <div class="gantt-linha"><u></u><b style="--i:22%;--w:30%"></b></div>
+                      <div class="gantt-linha"><u></u><b style="--i:34%;--w:44%" class="azul"></b></div>
+                      <div class="gantt-linha"><u></u><b style="--i:52%;--w:26%"></b></div>
+                      <div class="gantt-linha"><u></u><b style="--i:60%;--w:34%" class="azul"></b></div>
+                      <div class="gantt-linha"><u></u><b style="--i:78%;--w:18%"></b></div>
+                      <i class="gantt-hoje"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="produto-texto">
+                  <span class="caixa">P</span>
+                  <div>
+                    <strong>Prumo</strong>
+                    <em>Gestão de obras</em>
+                    <p>Orçamento, cronograma, medições e compras para construtoras, engenheiros e prestadores de serviço, com acompanhamento direto do canteiro.</p>
+                  </div>
+                </div>
               </a>
             </li>
-            <li id="ocoroinha" class="social">
+
+            <!-- O Coroinha -->
+            <li class="produto surge social" id="ocoroinha">
               <a href="https://ocoroinha.com.br" target="_blank" rel="noopener noreferrer">
-                <span class="caixa grande">OC</span>
-                <span class="produto-nome">
-                  <strong>O Coroinha</strong>
-                  <em>Sem fins lucrativos</em>
-                </span>
-                <span class="produto-texto">
-                  Ferramenta gratuita para paróquias organizarem escalas, formação e comunicação
-                  de coroinhas e equipes litúrgicas. Mantido pela TechFide como contribuição à
-                  comunidade.
-                </span>
-                <span class="produto-link">ocoroinha.com.br</span>
+                <div class="tela" aria-hidden="true">
+                  <div class="tela-barra"><i></i><i></i><i></i><span>ocoroinha.com.br</span></div>
+                  <div class="mock mock-oc">
+                    <div class="agenda">
+                      <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+                      <b class="cheio"></b><b></b><b></b><b class="meio"></b><b></b><b></b><b class="cheio"></b>
+                      <b class="cheio"></b><b></b><b class="meio"></b><b></b><b></b><b></b><b class="cheio"></b>
+                      <b class="cheio azul"></b><b></b><b></b><b></b><b class="meio"></b><b></b><b class="cheio"></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="produto-texto">
+                  <span class="caixa">OC</span>
+                  <div>
+                    <strong>O Coroinha</strong>
+                    <em>Sem fins lucrativos</em>
+                    <p>Ferramenta gratuita para paróquias organizarem escalas, formação e comunicação de coroinhas e equipes litúrgicas. Mantido pela TechFide como contribuição à comunidade.</p>
+                  </div>
+                </div>
               </a>
             </li>
-            <li id="sonhodemaria">
+
+            <!-- Sonho de Maria -->
+            <li class="produto surge" id="sonhodemaria">
               <a href="https://www.sonhodemaria.com.br/" target="_blank" rel="noopener noreferrer">
-                <span class="caixa grande">SM</span>
-                <span class="produto-nome">
-                  <strong>Clínica Sonho de Maria</strong>
-                  <em>Site para cliente</em>
-                </span>
-                <span class="produto-texto">
-                  Site institucional de uma clínica de cuidado infantil em Rio Preto, com vídeo,
-                  apresentação da equipe e integração com Instagram, WhatsApp e Google Maps.
-                </span>
-                <span class="produto-link">sonhodemaria.com.br</span>
+                <div class="tela" aria-hidden="true">
+                  <div class="tela-barra"><i></i><i></i><i></i><span>sonhodemaria.com.br</span></div>
+                  <div class="mock mock-sm">
+                    <div class="site-topo"><b></b><u></u><u></u><u></u></div>
+                    <div class="site-hero"><em></em><u></u><u></u></div>
+                    <div class="site-cards"><b></b><b></b><b></b></div>
+                  </div>
+                </div>
+                <div class="produto-texto">
+                  <span class="caixa">SM</span>
+                  <div>
+                    <strong>Clínica Sonho de Maria</strong>
+                    <em>Site para cliente</em>
+                    <p>Site institucional de uma clínica de cuidado infantil em Rio Preto, com vídeo, apresentação da equipe e integração com Instagram, WhatsApp e Google Maps.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- Seu projeto -->
+            <li class="produto produto-convite surge">
+              <a href="#contato">
+                <div class="convite">
+                  <p class="rotulo"><b>?</b> O próximo pode ser o seu</p>
+                  <strong>Tem um processo manual, uma planilha que virou sistema ou uma ideia de produto?</strong>
+                  <span class="seta">Conte para a gente</span>
+                </div>
               </a>
             </li>
           </ul>
@@ -269,25 +341,25 @@
 
       <!-- Método -->
       <section class="bloco" id="metodo">
-        <div class="wrap cabecalho">
+        <div class="wrap cabecalho surge">
           <h2><small>03</small>Como é trabalhar com a gente</h2>
           <p>Quatro etapas, sempre as mesmas, do primeiro contato ao suporte.</p>
         </div>
         <div class="wrap">
           <ol class="etapas">
-            <li>
+            <li class="surge">
               <h3>Conversa inicial</h3>
               <p>Entendemos o problema e o contexto. Se não fizer sentido construir, dizemos isso.</p>
             </li>
-            <li>
+            <li class="surge">
               <h3>Proposta clara</h3>
               <p>Escopo, prazo e valor por escrito. Sem letras miúdas nem surpresa no fim.</p>
             </li>
-            <li>
+            <li class="surge">
               <h3>Entregas curtas</h3>
               <p>Versões utilizáveis a cada uma ou duas semanas. Você testa e ajusta o rumo cedo.</p>
             </li>
-            <li>
+            <li class="surge">
               <h3>Depois do lançamento</h3>
               <p>Suporte e evolução contínua, com um contato direto para resolver o que aparecer.</p>
             </li>
@@ -297,15 +369,59 @@
 
       <!-- Nuvem -->
       <section class="bloco bloco-preto" id="nuvem">
-        <div class="wrap cabecalho">
+        <div class="wrap cabecalho surge">
           <h2><small>04</small>Nuvem</h2>
           <p>
             Nossos produtos e os sistemas que desenvolvemos rodam no Google Cloud, na região de
-            São Paulo.
+            São Paulo. Abaixo, a arquitetura que repetimos em cada projeto.
           </p>
         </div>
+        <div class="wrap">
+          <figure class="arquitetura surge">
+            <svg viewBox="0 0 1040 360" role="img" aria-labelledby="arq-titulo">
+              <title id="arq-titulo">Arquitetura: usuários acessam a aplicação no Cloud Run, que usa Firebase Auth, Vertex AI, Firestore e Pub/Sub; eventos alimentam o BigQuery; Cloud Build e Cloud Monitoring cobrem publicação e operação.</title>
+              <defs>
+                <marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0 0 L10 5 L0 10 z" fill="#0093fe" />
+                </marker>
+              </defs>
+              <g class="fluxo" fill="none" stroke="#0093fe" stroke-width="1.5" marker-end="url(#ponta)">
+                <path d="M150 143 H250" />
+                <path d="M410 143 C 455 143, 455 38, 500 38" />
+                <path d="M410 143 C 455 143, 455 108, 500 108" />
+                <path d="M410 143 C 455 143, 455 178, 500 178" />
+                <path d="M410 143 C 455 143, 455 248, 500 248" />
+                <path d="M660 248 H760" />
+              </g>
+              <g class="no">
+                <rect x="30" y="115" width="120" height="56" /><text x="90" y="139">Usuários</text><text x="90" y="158" class="sub">web · app</text>
+              </g>
+              <g class="no no-azul">
+                <rect x="250" y="105" width="160" height="76" /><text x="330" y="139">Cloud Run</text><text x="330" y="160" class="sub">API e aplicação</text>
+              </g>
+              <g class="no">
+                <rect x="500" y="10" width="160" height="56" /><text x="580" y="34">Firebase Auth</text><text x="580" y="53" class="sub">identidade</text>
+              </g>
+              <g class="no">
+                <rect x="500" y="80" width="160" height="56" /><text x="580" y="104">Vertex AI</text><text x="580" y="123" class="sub">Gemini · Document AI</text>
+              </g>
+              <g class="no">
+                <rect x="500" y="150" width="160" height="56" /><text x="580" y="174">Firestore</text><text x="580" y="193" class="sub">Cloud SQL · Storage</text>
+              </g>
+              <g class="no">
+                <rect x="500" y="220" width="160" height="56" /><text x="580" y="244">Pub/Sub</text><text x="580" y="263" class="sub">eventos</text>
+              </g>
+              <g class="no">
+                <rect x="760" y="220" width="160" height="56" /><text x="840" y="244">BigQuery</text><text x="840" y="263" class="sub">análise</text>
+              </g>
+              <g class="no no-trilho">
+                <rect x="30" y="304" width="890" height="46" /><text x="475" y="328" class="sub">Cloud Build · Artifact Registry · Cloud Monitoring · Logging — publicação e operação de tudo acima</text>
+              </g>
+            </svg>
+          </figure>
+        </div>
         <div class="wrap colunas">
-          <div class="prosa">
+          <div class="prosa surge">
             <p>
               Escolhemos a nuvem por um motivo simples: uma empresa pequena não deveria manter
               servidor. Serviços como Cloud Run, Firestore e Firebase escalam sozinhos, cobram pelo
@@ -322,7 +438,7 @@
             </p>
             <p><a class="seta" href="proposta-cloud.html">Ler a proposta completa</a></p>
           </div>
-          <dl class="ficha">
+          <dl class="ficha surge">
             <div><dt>Aplicação</dt><dd>Cloud Run, Cloud Functions</dd></div>
             <div><dt>Dados</dt><dd>Firestore, Cloud SQL, Cloud Storage, BigQuery</dd></div>
             <div><dt>Acesso</dt><dd>Firebase Authentication, Firebase Hosting</dd></div>
@@ -334,12 +450,12 @@
 
       <!-- Empresa -->
       <section class="bloco" id="empresa">
-        <div class="wrap cabecalho">
+        <div class="wrap cabecalho surge">
           <h2><small>05</small>Empresa</h2>
           <p>Pequenos de propósito. Preferimos fazer bem poucos projetos a fazer muitos pela metade.</p>
         </div>
         <div class="wrap colunas">
-          <div class="prosa">
+          <div class="prosa surge">
             <p>
               A TechFide é o nome fantasia da Matheus Barbosa Lheira Soluções em Tecnologia LTDA,
               empresa de desenvolvimento de software com sede em São José do Rio Preto, interior
@@ -351,7 +467,7 @@
               os sistemas que entregamos.
             </p>
           </div>
-          <dl class="ficha">
+          <dl class="ficha surge">
             <div><dt>Razão social</dt><dd>Matheus Barbosa Lheira Soluções em Tecnologia LTDA</dd></div>
             <div><dt>CNPJ</dt><dd>69.381.775/0001-50</dd></div>
             <div><dt>Atividade principal</dt><dd>Desenvolvimento de programas de computador sob encomenda</dd></div>
@@ -363,18 +479,18 @@
       <!-- Contato -->
       <section class="bloco contato" id="contato">
         <div class="wrap">
-          <h2>Vamos conversar?</h2>
-          <p class="contato-texto">Conte o que você precisa. Respondemos em até um dia útil.</p>
+          <h2 class="surge">Vamos conversar?</h2>
+          <p class="contato-texto surge">Conte o que você precisa. Respondemos em até um dia útil.</p>
           <ul class="contato-lista">
-            <li>
+            <li class="surge">
               <span>WhatsApp</span>
               <a href="https://wa.me/5517999608805?text=Ol%C3%A1%2C%20TechFide.%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">(17) 99960-8805</a>
             </li>
-            <li>
+            <li class="surge">
               <span>E-mail</span>
               <a href="mailto:matheusbl.info@gmail.com">matheusbl.info@gmail.com</a>
             </li>
-            <li>
+            <li class="surge">
               <span>Onde estamos</span>
               <strong>São José do Rio Preto, SP</strong>
             </li>
