@@ -17,6 +17,16 @@
     });
   }
 
+  /* Topo ganha destaque ao rolar */
+  var topo = document.querySelector(".topo");
+  if (topo) {
+    var marcaRolagem = function () {
+      topo.classList.toggle("rolou", window.scrollY > 24);
+    };
+    window.addEventListener("scroll", marcaRolagem, { passive: true });
+    marcaRolagem();
+  }
+
   /* Ano do rodapé */
   var ano = document.getElementById("ano");
   if (ano) ano.textContent = String(new Date().getFullYear());

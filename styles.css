@@ -226,10 +226,17 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--linha);
+  background: var(--preto);
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.topo.rolou {
+  background: rgba(11, 11, 12, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: var(--linha-escura);
+  box-shadow: 0 1px 0 rgba(0, 147, 254, 0.25), 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .topo-linha {
@@ -251,25 +258,26 @@ p {
 }
 
 .menu a {
-  color: var(--texto);
+  color: var(--cinza);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
+  transition: color 0.15s ease;
 }
 
 .menu a:hover,
 .menu a.ativo {
-  color: var(--azul-escuro);
+  color: var(--branco);
 }
 
 .menu .menu-destaque {
-  background: var(--preto);
-  color: var(--branco);
+  background: var(--azul);
+  color: var(--preto);
   padding: 9px 16px;
 }
 
 .menu .menu-destaque:hover {
-  background: var(--azul);
+  background: var(--branco);
   color: var(--preto);
 }
 
@@ -278,10 +286,10 @@ p {
   font: inherit;
   font-weight: 500;
   background: none;
-  border: 1px solid var(--linha);
+  border: 1px solid var(--linha-escura);
   padding: 8px 14px;
   cursor: pointer;
-  color: var(--texto);
+  color: var(--branco);
 }
 
 /* Abertura ---------------------------------------------------------- */
@@ -290,7 +298,7 @@ p {
   position: relative;
   background: var(--preto);
   color: var(--branco);
-  padding: clamp(72px, 10vw, 136px) 0 0;
+  padding: clamp(56px, 8vw, 112px) 0 0;
   overflow: hidden;
 }
 
@@ -1447,8 +1455,8 @@ td {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--branco);
-    border-bottom: 1px solid var(--linha);
+    background: var(--preto);
+    border-bottom: 1px solid var(--linha-escura);
   }
 
   .menu.aberto {
@@ -1457,7 +1465,7 @@ td {
 
   .menu a {
     padding: 14px 20px;
-    border-top: 1px solid var(--linha);
+    border-top: 1px solid var(--linha-escura);
   }
 
   .menu .menu-destaque {
