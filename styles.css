@@ -582,274 +582,23 @@ p {
   color: var(--texto-suave);
 }
 
-.mock {
-  position: relative;
+/* captura real do produto */
+.print {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
   background: var(--branco);
   border: 1px solid var(--linha);
   border-bottom: 0;
-  height: 200px;
-  overflow: hidden;
+  filter: saturate(0.92);
+  transition: filter 0.3s ease;
 }
 
-/* mock: ImobiFide (listagem com cards) */
-.mock-if {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-}
-
-.mock-lateral {
-  background: var(--preto);
-  padding: 14px 12px;
-  display: grid;
-  gap: 10px;
-  align-content: start;
-}
-
-.mock-lateral b {
-  display: block;
-  height: 6px;
-  background: var(--linha-escura);
-}
-
-.mock-lateral b:first-child {
-  background: var(--azul);
-}
-
-.mock-area {
-  padding: 16px;
-}
-
-.mock-busca {
-  height: 20px;
-  border: 1px solid var(--linha);
-  margin-bottom: 14px;
-  width: 60%;
-}
-
-.mock-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.mock-card {
-  border: 1px solid var(--linha);
-  padding: 8px;
-  display: grid;
-  gap: 6px;
-}
-
-.mock-card em {
-  display: block;
-  height: 54px;
-  background: var(--cinza-claro);
-  position: relative;
-}
-
-.mock-card em::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  bottom: 6px;
-  width: 26px;
-  height: 8px;
-  background: var(--azul);
-}
-
-.mock-card u {
-  display: block;
-  height: 6px;
-  background: var(--linha);
-}
-
-.mock-card u:last-child {
-  width: 60%;
-}
-
-/* mock: ImobiNexa (nós ligados) */
-.mock-in svg {
-  width: 100%;
-  height: 100%;
-}
-
-.fluxo path {
-  stroke-dasharray: 6 6;
-  animation: correr 1.6s linear infinite;
-}
-
-@keyframes correr {
-  to {
-    stroke-dashoffset: -24;
-  }
-}
-
-/* mock: Prumo (cronograma) */
-.gantt {
-  position: relative;
-  padding: 18px 16px;
-  display: grid;
-  gap: 12px;
-}
-
-.gantt-linha {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 12px;
-  align-items: center;
-}
-
-.gantt-linha u {
-  display: block;
-  height: 6px;
-  background: var(--linha);
-}
-
-.gantt-linha b {
-  display: block;
-  height: 12px;
-  background: var(--cinza);
-  margin-left: var(--i);
-  width: var(--w);
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.gantt-linha b.azul {
-  background: var(--azul);
-}
-
-.visto .gantt-linha b {
-  transform: scaleX(1);
-}
-
-.visto .gantt-linha:nth-child(2) b { transition-delay: 0.08s; }
-.visto .gantt-linha:nth-child(3) b { transition-delay: 0.16s; }
-.visto .gantt-linha:nth-child(4) b { transition-delay: 0.24s; }
-.visto .gantt-linha:nth-child(5) b { transition-delay: 0.32s; }
-.visto .gantt-linha:nth-child(6) b { transition-delay: 0.4s; }
-
-.gantt-hoje {
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: calc(64px + (100% - 80px) * 0.46);
-  width: 1px;
-  border-left: 1px dashed var(--preto);
-}
-
-/* mock: O Coroinha (escala semanal) */
-.agenda {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  padding: 16px;
-}
-
-.agenda span {
-  font-family: var(--mono);
-  font-size: 0.66rem;
-  text-align: center;
-  color: var(--texto-suave);
-}
-
-.agenda b {
-  display: block;
-  height: 40px;
-  border: 1px solid var(--linha);
-  position: relative;
-}
-
-.agenda b.meio::after,
-.agenda b.cheio::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  right: 5px;
-  top: 6px;
-  height: 6px;
-  background: var(--cinza);
-}
-
-.agenda b.cheio::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  right: 5px;
-  top: 16px;
-  height: 6px;
-  background: var(--cinza);
-}
-
-.agenda b.azul::after {
-  background: var(--azul);
-}
-
-/* mock: site institucional */
-.mock-sm {
-  padding: 14px 16px;
-  display: grid;
-  gap: 12px;
-  align-content: start;
-}
-
-.site-topo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.site-topo b {
-  width: 28px;
-  height: 10px;
-  background: var(--azul);
-}
-
-.site-topo u {
-  display: block;
-  width: 28px;
-  height: 5px;
-  background: var(--linha);
-}
-
-.site-topo u:nth-child(2) {
-  margin-left: auto;
-}
-
-.site-hero {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 10px;
-  align-items: center;
-}
-
-.site-hero em {
-  display: block;
-  height: 64px;
-  background: var(--cinza-claro);
-  grid-row: 1 / span 2;
-  grid-column: 2;
-}
-
-.site-hero u {
-  display: block;
-  height: 8px;
-  background: var(--linha);
-}
-
-.site-hero u:last-child {
-  width: 70%;
-}
-
-.site-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.site-cards b {
-  height: 44px;
-  border: 1px solid var(--linha);
+.produto a:hover .print {
+  filter: saturate(1);
 }
 
 /* texto do produto */
@@ -1412,10 +1161,6 @@ td {
 
   .tela {
     padding: 16px 16px 0;
-  }
-
-  .mock {
-    height: 180px;
   }
 
   .prosa,

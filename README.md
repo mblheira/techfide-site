@@ -11,6 +11,7 @@ Landing page estática da TechFide (Matheus Barbosa Lheira Soluções em Tecnolo
 | `styles.css` | Tema escuro com a paleta do logo (`#0093FE`, preto, `#C2C2C2`) |
 | `script.js` | Menu mobile, animações de entrada, link ativo e formulário → WhatsApp |
 | `assets/` | Logos (`logo-icon`, `logo-tf`, `logo-full`), favicons e imagem Open Graph |
+| `assets/produtos/` | Capturas reais dos produtos (1120×700, WebP) usadas como miniaturas na seção Produtos |
 
 Sem build, sem dependências. Basta servir a pasta.
 
