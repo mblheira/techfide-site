@@ -24,7 +24,14 @@ python3 -m http.server 8080
 
 ## Publicar
 
-- **Firebase Hosting:** `firebase init hosting` apontando a pasta pública para a raiz do repositório.
-- **GitHub Pages:** Settings → Pages → branch `main`, pasta `/`.
+O site é publicado na HostGator (techfide.com.br, pasta `public_html`) automaticamente a cada push na `main`,
+pelo workflow `.github/workflows/deploy.yml` (FTPS com FTP-Deploy-Action). Ele também pode ser disparado à mão:
+
+```bash
+gh workflow run "Publicar no HostGator" --repo mblheira/techfide-site
+```
+
+Segredos usados pelo workflow (Settings → Secrets → Actions): `FTP_SERVER`, `FTP_USERNAME` e `FTP_PASSWORD`
+da conta FTP `deploy@techfide.com.br`, criada no cPanel com diretório `/home2/math2418/public_html`.
 
 Ao trocar o domínio, atualize as tags `canonical`, `og:url` e o JSON-LD em `index.html` e `proposta-cloud.html`.
