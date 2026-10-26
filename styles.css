@@ -548,7 +548,7 @@ p {
 
 .produto a:hover {
   transform: translateY(-3px);
-  border-color: var(--azul);
+  border-color: var(--cor, var(--azul));
   box-shadow: 0 18px 40px rgba(11, 11, 12, 0.08);
 }
 
@@ -604,7 +604,7 @@ p {
 /* texto do produto */
 .produto-texto {
   display: grid;
-  grid-template-columns: 34px 1fr;
+  grid-template-columns: 48px 1fr;
   gap: 16px;
   padding: 24px 26px 28px;
   align-items: start;
@@ -632,9 +632,21 @@ p {
   color: var(--texto);
 }
 
-.produto.social .caixa {
-  background: var(--preto);
-  color: var(--branco);
+/* ícone da marca de cada produto */
+.produto .marca {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+  box-shadow: 0 0 0 1px rgba(11, 11, 12, 0.08);
+}
+
+.produto .tela {
+  border-top: 3px solid var(--cor, var(--azul));
+}
+
+.produto-texto em {
+  color: var(--cor-texto, var(--texto-suave));
+  filter: brightness(0.85);
 }
 
 .produto-convite a {
