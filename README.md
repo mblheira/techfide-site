@@ -12,6 +12,7 @@ Landing page estática da TechFide (Matheus Barbosa Lheira Soluções em Tecnolo
 | `script.js` | Menu mobile, animações de entrada, link ativo e formulário → WhatsApp |
 | `assets/` | Logos (`logo-icon`, `logo-tf`, `logo-full`), favicons e imagem Open Graph |
 | `assets/produtos/` | Capturas reais dos produtos (1120×700, WebP) usadas como miniaturas na seção Produtos |
+| `.htaccess` | Redireciona HTTP para HTTPS (301, exceto `/.well-known/`), mantém o bloco de PHP criado pelo cPanel e bloqueia o acesso público ao arquivo de estado do deploy (`.ftp-deploy-sync-state.json`) |
 
 Sem build, sem dependências. Basta servir a pasta.
 
@@ -33,5 +34,9 @@ gh workflow run "Publicar no HostGator" --repo mblheira/techfide-site
 
 Segredos usados pelo workflow (Settings → Secrets → Actions): `FTP_SERVER`, `FTP_USERNAME` e `FTP_PASSWORD`
 da conta FTP `deploy@techfide.com.br`, criada no cPanel com diretório `/home2/math2418/public_html`.
+
+O deploy sobrescreve o `.htaccess` do servidor com o do repositório. Por isso o redirecionamento para HTTPS fica no
+`.htaccess` versionado, e qualquer regra nova deve ser feita aqui, não pelo cPanel (o toggle "Force HTTPS Redirect" do
+cPanel escreve no mesmo arquivo e seria apagado no próximo deploy).
 
 Ao trocar o domínio, atualize as tags `canonical`, `og:url` e o JSON-LD em `index.html` e `proposta-cloud.html`.
